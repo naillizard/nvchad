@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
@@ -20,3 +20,6 @@ map("v", "<silent>go", "<ESC><cmd>Sort<CR>", { desc = "Sort Strings" })
 --   nnoremap <silent> go <Cmd>Sort<CR>
 --   vnoremap <silent> go <Esc><Cmd>Sort<CR>
 -- ]]
+--
+-- just
+map("n", "<leader>j", ":!just<CR>", { silent = true })
