@@ -1,7 +1,7 @@
 local options = {
 	formatters_by_ft = {
 		lua = { "stylua" },
-		nix = { "nixpkgs_fmt" }, -- "alejandra" "nixpkgs_fmt"
+		nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
 		go = { "goimports", "gofmt" },
 		bicep = { "bicep" },
 		justfile = { "just" },
