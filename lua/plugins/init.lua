@@ -24,6 +24,10 @@ return {
 	},
 
 	{
+		"direnv/direnv.vim",
+	},
+
+	{
 		"olimorris/codecompanion.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
