@@ -1,12 +1,16 @@
 local options = {
 	formatters_by_ft = {
+		bicep = { "bicep" },
+		css = { "prettier" },
+		go = { "goimports", "gofmt" },
+		justfile = { "just" },
 		lua = { "stylua" },
 		nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
-		go = { "goimports", "gofmt" },
-		bicep = { "bicep" },
-		justfile = { "just" },
+		python = { "autopep8" },
 		yaml = { "yamlfmt" },
-		css = { "prettier" },
+		bash = { "beautysh" },
+		sh = { "beautysh" },
+		zsh = { "beautysh" },
 		-- html = { "prettier" },
 	},
 
