@@ -113,6 +113,13 @@ lspconfig.yamlls.setup({
 	},
 })
 
+lspconfig.powershell_es.setup({
+	settings = {
+		bundle_path = "/home/ronin/.local/share/nvim/mason/packages/powershell-editor-services/PowerShellEditorServices",
+		settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
+	},
+})
+
 -- configuring single server, example: typescript
 -- lspconfig.tsserver.setup {
 --   on_attach = nvlsp.on_attach,
