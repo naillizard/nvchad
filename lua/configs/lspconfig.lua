@@ -11,6 +11,7 @@ local servers = {
 	"css_variables",
 	"cssls",
 	"docker_compose_language_service",
+	"tailwindcss-language-server",
 	"dockerls",
 	"gdscript",
 	"gdshader_lsp",
@@ -30,6 +31,11 @@ local servers = {
 }
 local nvlsp = require("nvchad.configs.lspconfig")
 
+local home_dir = os.getenv("HOME")
+if home_dir == nil then
+	home_dir = os.getenv("USERPROFILE")
+end
+
 -- lsps with default config
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -39,9 +45,9 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-local bicep_lsp_bin =
-	"/home/ronin/.local/share/nvim/mason/packages/bicep-lsp/extension/bicepLanguageServer/Bicep.LangServer.dll"
-local omnisharp_lsp_bin = "/home/ronin/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"
+local bicep_lsp_bin = home_dir
+	.. "/.local/share/nvim/mason/packages/bicep-lsp/extension/bicepLanguageServer/Bicep.LangServer.dll"
+local omnisharp_lsp_bin = home_dir .. "/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"
 
 lspconfig.bicep.setup({
 	cmd = { "dotnet", bicep_lsp_bin },
@@ -114,10 +120,9 @@ lspconfig.yamlls.setup({
 })
 
 lspconfig.powershell_es.setup({
-	settings = {
-		bundle_path = "/home/ronin/.local/share/nvim/mason/packages/powershell-editor-services/PowerShellEditorServices",
-		settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
-	},
+	bundle_path = home_dir .. "/.local/share/nvim/mason/packages/powershell-editor-services",
+	on_attach = nvlsp.on_attach,
+	settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
 })
 
 -- configuring single server, example: typescript
