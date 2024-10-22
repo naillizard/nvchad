@@ -1,17 +1,18 @@
 local options = {
 	formatters_by_ft = {
+		bash = { "beautysh" },
 		bicep = { "bicep" },
 		css = { "prettier" },
 		go = { "goimports", "gofmt" },
+		html = { "prettier" },
 		justfile = { "just" },
 		lua = { "stylua" },
 		nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
 		python = { "autopep8" },
-		yaml = { "yamlfmt" },
-		bash = { "beautysh" },
 		sh = { "beautysh" },
+		yaml = { "yamlfmt" },
 		zsh = { "beautysh" },
-		-- html = { "prettier" },
+		blade = { "blade-formatter" },
 	},
 
 	format_on_save = {
