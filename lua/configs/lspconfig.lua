@@ -51,7 +51,6 @@ local omnisharp_lsp_bin = home_dir .. "/.local/share/nvim/mason/packages/omnisha
 
 lspconfig.bicep.setup({
 	cmd = { "dotnet", bicep_lsp_bin },
-	filetypes = { "bicep", "bicepparam" },
 })
 
 lspconfig.omnisharp.setup({
