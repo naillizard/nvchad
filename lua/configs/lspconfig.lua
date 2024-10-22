@@ -11,7 +11,7 @@ local servers = {
 	"css_variables",
 	"cssls",
 	"docker_compose_language_service",
-	"tailwindcss-language-server",
+	"tailwindcss",
 	"dockerls",
 	"gdscript",
 	"gdshader_lsp",
