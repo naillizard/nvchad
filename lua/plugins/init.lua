@@ -137,6 +137,14 @@ return {
 		ft = { "just" },
 	},
 
+	-- {
+	-- 	"TheLeoP/powershell.nvim",
+	-- 	---@type powershell.user_config
+	-- 	opts = {
+	-- 		bundle_path = vim.fn.bundle_path "data" .. "/mason/packages/powershell-editor-services",
+	-- 	},
+	-- },
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
@@ -171,6 +179,7 @@ return {
 				"vim",
 				"vimdoc",
 				"yaml",
+				"php",
 			},
 		},
 	},
