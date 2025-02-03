@@ -5,7 +5,6 @@ return {
 		opts = {
 			formatters_by_ft = {
 				bash = { "beautysh" },
-				-- bicep = { "bicep" },
 				blade = { "blade-formatter" },
 				css = { "prettier" },
 				go = { "goimports", "gofmt" },
@@ -15,6 +14,7 @@ return {
 				markdown = { "markdownlint" },
 				nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
 				python = { "autopep8" },
+				rust = { "rustfmt", lsp_format = "fallback" },
 				sh = { "beautysh" },
 				yaml = { "yamlfmt" },
 				zsh = { "beautysh" },
@@ -22,8 +22,8 @@ return {
 
 			format_on_save = {
 				-- These options will be passed to conform.format()
+				lsp_format = "fallback",
 				timeout_ms = 500,
-				lsp_fallback = true,
 			},
 
 			log_level = vim.log.levels.DEBUG,
