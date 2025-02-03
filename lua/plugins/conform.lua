@@ -5,7 +5,7 @@ return {
 		opts = {
 			formatters_by_ft = {
 				bash = { "beautysh" },
-				bicep = { "bicep" },
+				-- bicep = { "bicep" },
 				blade = { "blade-formatter" },
 				css = { "prettier" },
 				go = { "goimports", "gofmt" },
@@ -25,6 +25,8 @@ return {
 				timeout_ms = 500,
 				lsp_fallback = true,
 			},
+
+			log_level = vim.log.levels.DEBUG,
 		},
 	},
 }
