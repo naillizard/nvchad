@@ -7,7 +7,7 @@ return {
 				bash = { "beautysh" },
 				blade = { "blade-formatter" },
 				css = { "prettier" },
-				go = { "goimports", "gofmt" },
+				-- go = { "golines", "goimports_reviser" },
 				html = { "prettier" },
 				justfile = { "just" },
 				lua = { "stylua" },

@@ -18,4 +18,9 @@ return {
 			end
 		end,
 	},
+	{
+		"ellisonleao/glow.nvim",
+		config = true,
+		cmd = "Glow",
+	},
 }

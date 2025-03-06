@@ -13,16 +13,23 @@ return {
 			require("codecompanion").setup({
 				strategies = {
 					chat = {
-						adapter = "ollama",
+						adapter = "openai",
 					},
 					inline = {
-						adapter = "ollama",
+						adapter = "openai",
 					},
 					agent = {
-						adapter = "ollama",
+						adapter = "openai",
 					},
 				},
 				adapters = {
+					openai = function()
+						return require("codecompanion.adapters").extend("openai", {
+							env = {
+								api_key = "cmd:gopass -o api/openai/nvchad",
+							},
+						})
+					end,
 					anthropic = function()
 						return require("codecompanion.adapters").extend("anthropic", {
 							env = {
