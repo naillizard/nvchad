@@ -23,7 +23,7 @@ return {
 
       formatters = {
         stylua = {
-          command = "stylua",
+          command = "/home/ronin/.nix-profile/bin/stylua",
         },
       },
 
