@@ -21,8 +21,10 @@ return {
 				zsh = { "beautysh" },
 			},
 
-      formatters.stylua = {
-        command = "stylua",
+      formatters = {
+        stylua = {
+          command = "stylua",
+        },
       },
 
 			format_on_save = {
