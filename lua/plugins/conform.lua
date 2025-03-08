@@ -15,17 +15,17 @@ return {
 				nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
 				python = { "autopep8" },
 				rust = { "rustfmt", lsp_format = "fallback" },
-        terraform = { "terraformfmt" },
+				terraform = { "terraformfmt" },
 				sh = { "beautysh" },
 				yaml = { "yamlfmt" },
 				zsh = { "beautysh" },
 			},
 
-      formatters = {
-        stylua = {
-          command = "/home/ronin/.nix-profile/bin/stylua",
-        },
-      },
+			formatters = {
+				stylua = {
+					command = "/home/ronin/.nix-profile/bin/stylua",
+				},
+			},
 
 			format_on_save = {
 				-- These options will be passed to conform.format()

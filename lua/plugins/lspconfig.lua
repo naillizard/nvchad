@@ -104,7 +104,7 @@ return {
 				tailwindcss = {},
 				ts_ls = {},
 				vimls = {},
-        terraformls = {},
+				terraformls = {},
 				yamlls = {
 					settings = {
 						yaml = {
