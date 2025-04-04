@@ -13,6 +13,7 @@ return {
 				lua = { "stylua" },
 				markdown = { "markdownlint" },
 				nix = { "alejandra" }, -- "alejandra" "nixpkgs_fmt"
+				nushell = { "nufmt" },
 				python = { "autopep8" },
 				rust = { "rustfmt", lsp_format = "fallback" },
 				terraform = { "terraformfmt" },

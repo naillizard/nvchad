@@ -25,6 +25,7 @@ return {
 				"lua",
 				"make",
 				"nix",
+				"nu",
 				"php",
 				"powershell",
 				"python",
