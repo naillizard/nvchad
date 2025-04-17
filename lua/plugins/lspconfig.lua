@@ -12,6 +12,7 @@ end
 local bicep_lsp_bin = home_dir
 	.. "/.local/share/nvim/mason/packages/bicep-lsp/extension/bicepLanguageServer/Bicep.LangServer.dll"
 local powershell_es_lsp_bin = home_dir .. "/.local/share/nvim/mason/packages/powershell-editor-services"
+local lua_ls = home_dir .. "/.nix-profile/bin/lua-language-server"
 
 local my_attach = function(client)
 	on_attach(client)
@@ -70,6 +71,7 @@ return {
 				-- htmx = {},
 				jsonls = {},
 				lua_ls = {
+					cmd = { lua_ls },
 					settings = {
 						Lua = {
 							diagnostics = {
