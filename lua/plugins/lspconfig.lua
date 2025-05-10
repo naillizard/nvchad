@@ -46,6 +46,7 @@ return {
 			-- EXAMPLE
 			local servers = {
 				arduino_language_server = {},
+				bashls = {},
 				bicep = {
 					cmd = { "dotnet", bicep_lsp_bin },
 				},
@@ -81,6 +82,7 @@ return {
 					},
 				},
 				markdown_oxide = {},
+				nixd = {},
 				-- "nil_ls",
 				powershell_es = {
 					bundle_path = powershell_es_lsp_bin,
