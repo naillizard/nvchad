@@ -106,6 +106,7 @@ return {
 						},
 					},
 				},
+				zls = {},
 			}
 
 			-- lsps with default config

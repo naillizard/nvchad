@@ -35,6 +35,7 @@ return {
 				"vim",
 				"vimdoc",
 				"yaml",
+				"zig",
 			},
 		},
 	},
