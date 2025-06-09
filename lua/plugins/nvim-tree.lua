@@ -4,6 +4,7 @@ return {
 		opts = {
 			view = {
 				side = "right",
+				width = 50,
 			},
 		},
 	},
