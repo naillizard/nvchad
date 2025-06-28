@@ -26,14 +26,14 @@ return {
 					openai = function()
 						return require("codecompanion.adapters").extend("openai", {
 							env = {
-								api_key = "cmd:gopass -o api/openai/nvchad",
+								api_key = "cmd:gopass -o ai/openai/nvchad",
 							},
 						})
 					end,
 					anthropic = function()
 						return require("codecompanion.adapters").extend("anthropic", {
 							env = {
-								api_key = "cmd:gopass -o api/claude/nvim",
+								api_key = "cmd:gopass -o ai/claude",
 							},
 						})
 					end,
