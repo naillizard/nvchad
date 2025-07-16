@@ -38,6 +38,29 @@ return {
 						})
 					end,
 				},
+				prompt_library = {
+					["Generate a Commit Message"] = {
+						prompts = {
+							{
+								role = "user",
+								content = function()
+									return string.format(
+										[[You are an expert at following the Conventional Commit specification. Given the git diff listed below, please generate a commit message for me, always follow the 50/72 rule, the subject line cannot exceed 50 characters in length and each line in the body cannot exceed 72 characters in length:
+
+```diff
+%s
+```
+]],
+										vim.fn.system("git diff --no-ext-diff --staged")
+									)
+								end,
+								opts = {
+									contains_code = true,
+								},
+							},
+						},
+					},
+				},
 				opts = {
 					log_level = "DEBUG",
 				},
