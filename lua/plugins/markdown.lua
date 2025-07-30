@@ -5,7 +5,9 @@ return {
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		ft = { "markdown" },
 		build = function(plugin)
-			if vim.fn.executable("npx") then
+			if vim.fn.executable("bun") then
+				vim.cmd("!cd " .. plugin.dir .. " && cd app && bun install")
+			elseif vim.fn.executable("npx") then
 				vim.cmd("!cd " .. plugin.dir .. " && cd app && npx --yes npm install")
 			else
 				vim.cmd([[Lazy load markdown-preview.nvim]])

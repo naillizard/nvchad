@@ -45,6 +45,7 @@ return {
 		config = function()
 			-- EXAMPLE
 			local servers = {
+				ansiblels = {},
 				arduino_language_server = {},
 				bashls = {},
 				bicep = {
@@ -118,7 +119,7 @@ return {
 				}
 				-- local merged = vim.tbl_deep_extend("force", base_config, configs[name])
 				opts.on_init = configs.on_init
-				opts.on_attach = base_config.on_attach
+				opts.on_attach = configs.on_attach
 				opts.capabilities = configs.capabilities
 
 				require("lspconfig")[name].setup(opts)

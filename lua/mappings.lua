@@ -27,16 +27,16 @@ map("n", "<leader>j", ":!just<CR>", { silent = true })
 map("n", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true, desc = "code companion actions" })
 map("v", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true, desc = "code companion actions" })
 map(
-  "n",
-  "<LocalLeader>a",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "code companion chat" }
+	"n",
+	"<LocalLeader>a",
+	"<cmd>CodeCompanionChat Toggle<cr>",
+	{ noremap = true, silent = true, desc = "code companion chat" }
 )
 map(
-  "v",
-  "<LocalLeader>a",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "code companion chat" }
+	"v",
+	"<LocalLeader>a",
+	"<cmd>CodeCompanionChat Toggle<cr>",
+	{ noremap = true, silent = true, desc = "code companion chat" }
 )
 map("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true, desc = "code companion chat add" })
 
