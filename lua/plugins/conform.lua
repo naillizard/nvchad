@@ -5,7 +5,6 @@ return {
 		opts = {
 			formatters_by_ft = {
 				bash = { "beautysh" },
-				blade = { "blade-formatter" },
 				-- css = { "prettier" },
 				go = { "golines", "goimports-reviser" },
 				html = { "prettier" },

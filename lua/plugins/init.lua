@@ -1,33 +1,8 @@
 return {
-	-- These are some examples, uncomment them if you want to see them work!
-	-- {
-	-- 	"jackMort/ChatGPT.nvim",
-	-- 	event = "VeryLazy",
-	-- 	dependencies = {
-	-- 		"MunifTanjim/nui.nvim",
-	-- 		"folke/trouble.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-telescope/telescope.nvim",
-	-- 	},
-	-- 	config = function()
-	-- 		require("chatgpt").setup({
-	-- 			api_key_cmd = "pass show api/openai/nvchad",
-	-- 			predefined_chat_gpt_prompts = "https://raw.githubusercontent.com/RocKing1001/awesome-chatgpt-prompts/main/prompts.csv",
-	-- 			openai_params = {
-	-- 				model = "gpt-4",
-	-- 			},
-	-- 			openai_edit_params = {
-	-- 				model = "gpt-4",
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
-
-	-- {
-	-- 	"TheLeoP/powershell.nvim",
-	-- 	---@type powershell.user_config
-	-- 	opts = {
-	-- 		bundle_path = vim.fn.bundle_path "data" .. "/mason/packages/powershell-editor-services",
-	-- 	},
-	-- },
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			require("configs.lsp")
+		end,
+	},
 }
