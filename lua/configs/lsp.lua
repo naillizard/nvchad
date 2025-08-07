@@ -12,7 +12,7 @@ local lua_ls = home_dir .. "/.nix-profile/bin/lua-language-server"
 
 local servers = {
 	ansiblels = {
-		filetypes = { "yaml", "yaml.ansible" },
+		filetypes = { "yaml.ansible" },
 		root_dir = require("lspconfig.util").root_pattern(".git", "ansible.cfg", ".ansible-lint"),
 		settings = {},
 	},
@@ -69,9 +69,9 @@ local servers = {
 	yamlls = {
 		settings = {
 			yaml = {
-				-- schemas = {
-				-- 	["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-				-- },
+				schemas = {
+					["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+				},
 				schemaStore = {
 					enable = true,
 				},
