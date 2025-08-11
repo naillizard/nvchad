@@ -65,6 +65,7 @@ local servers = {
 		-- filetypes = { "terraform", "tf" },
 		-- root_dir = require("lspconfig.util").root_pattern(".terraform", ".git", "*.tf"),
 	},
+	tflint = {},
 	ts_ls = {},
 	yamlls = {
 		settings = {
