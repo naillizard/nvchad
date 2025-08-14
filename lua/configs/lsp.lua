@@ -53,6 +53,7 @@ local servers = {
 	},
 	markdown_oxide = {},
 	nixd = {},
+	pyright = {},
 	vimls = {},
 	vuels = {},
 	powershell_es = {
