@@ -53,7 +53,17 @@ local servers = {
 	},
 	markdown_oxide = {},
 	nixd = {},
-	pyright = {},
+	pyright = {
+		settings = {
+			python = {
+				analysis = {
+					typeCheckingMode = "basic",
+					autoSearchPaths = true,
+					useLibraryCodeForTypes = true,
+				},
+			},
+		},
+	},
 	vimls = {},
 	vuels = {},
 	powershell_es = {
