@@ -23,20 +23,22 @@ return {
 					},
 				},
 				adapters = {
-					openai = function()
-						return require("codecompanion.adapters").extend("openai", {
-							env = {
-								api_key = "cmd:gopass -o ai/openai/nvchad",
-							},
-						})
-					end,
-					anthropic = function()
-						return require("codecompanion.adapters").extend("anthropic", {
-							env = {
-								api_key = "cmd:gopass -o ai/claude",
-							},
-						})
-					end,
+					http = {
+						openai = function()
+							return require("codecompanion.adapters").extend("openai", {
+								env = {
+									api_key = "cmd:gopass -o ai/openai/nvchad",
+								},
+							})
+						end,
+						anthropic = function()
+							return require("codecompanion.adapters").extend("anthropic", {
+								env = {
+									api_key = "cmd:gopass -o ai/claude",
+								},
+							})
+						end,
+					},
 				},
 				prompt_library = {
 					["Generate a Commit Message"] = {
