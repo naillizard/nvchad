@@ -23,7 +23,7 @@ require("lazy").setup({
 	},
 
 	{ import = "plugins" },
-	-- { import = "plugins/languages" },
+	{ import = "plugins/languages" },
 }, lazy_config)
 
 -- load theme
