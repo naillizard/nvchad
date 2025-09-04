@@ -3,7 +3,6 @@ require("nvchad.options")
 -- add yours here!
 vim.g.dap_virtual_text = true -- enable debug adapter protocol (DAP)
 vim.opt.colorcolumn = "80"
-vim.opt.clipboard = "unnamedplus"
 vim.o.cursorlineopt = "both"
 
 vim.o.undofile = true
@@ -20,6 +19,10 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = "menuone,noselect"
 
 vim.o.termguicolors = true
+
+vim.schedule(function()
+	vim.opt.clipboard = "unnamedplus"
+end)
 
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline
