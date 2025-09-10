@@ -4,11 +4,13 @@ return {
 		opts = {
 			ensure_installed = {
 				"arduino",
+				"astro",
 				"bicep",
 				"comment",
 				"css",
 				"dockerfile",
 				"editorconfig",
+				"elixir",
 				"gdscript",
 				"git_config",
 				"git_rebase",

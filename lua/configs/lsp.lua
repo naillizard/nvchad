@@ -1,5 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require("lspconfig")
+local util = require("lspconfig.util")
 
 local home_dir = os.getenv("HOME")
 if home_dir == nil then
@@ -26,20 +27,22 @@ local function is_nixos()
 	return false
 end
 
-local bicep_lsp_dll, powershell_es_lsp_bin, lua_ls
+local bicep_lsp_dll, powershell_es_lsp_bin, lua_ls, elixir_ls
 
 if is_nixos() then
 	bicep_lsp_dll = home_dir .. "/.nix-profile/lib/bicep/Bicep.LangServer.dll"
 	powershell_es_lsp_bin = home_dir .. "/.nix-profile/lib/powershell-editor-services"
 	lua_ls = home_dir .. "/.nix-profile/bin/lua-language-server"
+	elixir_ls = home_dir .. "/.nix-profile/bin/elixir-ls"
 else
 	bicep_lsp_dll = home_dir
 		.. "/.local/share/nvim/mason/packages/bicep-lsp/extension/bicepLanguageServer/Bicep.LangServer.dll"
 	powershell_es_lsp_bin = home_dir .. "/.local/share/nvim/mason/packages/powershell-editor-services"
 	lua_ls = home_dir .. "/.local/share/nvim/mason/bin/lua-language-server"
+	elixir_ls = home_dir .. "/.local/share/nvim/mason/bin/elixir-ls"
 end
 
-local roslynCmd = {}
+-- local roslynCmd = {}
 
 -- if vim.fn.has("win32") == 1 then
 -- 	roslynCmd = {
@@ -66,6 +69,7 @@ local servers = {
 		settings = {},
 	},
 	arduino_language_server = {},
+	astro = {},
 	bashls = {},
 	bicep = {
 		cmd = { "dotnet", bicep_lsp_dll },
@@ -75,6 +79,12 @@ local servers = {
 	cssls = {},
 	docker_compose_language_service = {},
 	dockerls = {},
+	elixirls = {
+		cmd = { elixir_ls },
+	},
+	-- expert = {
+	-- 	cmd = { expert_ls },
+	-- },
 	gdscript = {},
 	gdshader_lsp = {},
 	gopls = {
