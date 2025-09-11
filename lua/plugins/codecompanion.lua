@@ -47,7 +47,7 @@ return {
 								role = "user",
 								content = function()
 									return string.format(
-										[[You are an expert at following the Conventional Commit specification. Given the git diff listed below, please generate a commit message for me, always follow the 50/72 rule, the subject line cannot exceed 50 characters in length and each line in the body cannot exceed 72 characters in length:
+										[[You are an expert at following the Conventional Commit specification. Given the git diff listed below, please generate a commit message for me, always follow the 50/72 rule, the subject line cannot exceed 50 characters in length (including all conventional commits notation) and each line in the body cannot exceed 72 characters in length, you're not allowed to ever break this rule, and you need to ensure to use the appropriate conventional commit type, feat for features and fix for fixing bugs etc:
 
 ```diff
 %s
